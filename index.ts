@@ -30,8 +30,39 @@ zipCode = 12345
 
 console.log(zipCode)
 
-function sum(x : number , y: number) {
+function sum(x : number , y: number) : number {
     return x + y
 }
 
 console.log(sum(4,5))
+
+let total: number = sum(5,6)
+console.log(total)
+
+function debug(message : string) : void { //Here DONT USE RETURN SEE VOID
+    console.log(message)
+}
+
+debug("this is the message")
+
+let person: any = { //to scape from errors
+    firstName: "me",
+    age: 23
+}
+
+
+//below is the right way to write an object, more similar to clases and constructors 
+interface person {
+    firstName: string,
+    age: number,
+    children: string[],
+    hasCertificate: boolean,
+    optional?: boolean //not obligatory
+}
+
+let damian: person = {
+    firstName: "me",
+    age: 23,
+    children: ['Lily', 'David'],
+    hasCertificate: false
+}
