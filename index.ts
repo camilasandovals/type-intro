@@ -29,3 +29,9 @@ let zipCode: string | number = "ABC"
 zipCode = 12345
 
 console.log(zipCode)
+
+function sum(x : number , y: number) {
+    return x + y
+}
+
+console.log(sum(4,5))
